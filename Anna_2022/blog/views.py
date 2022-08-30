@@ -15,9 +15,9 @@ def blog_index(request):
 
 
 def blog_detail(request, pk):
-    category = Category.objects.get(pk=pk)
+    category = Post.objects.get(pk=pk)
     post = Post.objects.get(pk=pk)
-    comment = Comment.objects.get(pk=pk)
+    comment = Post.objects.get(pk=pk)
     context = {
         'category': category,
         'post': post,
